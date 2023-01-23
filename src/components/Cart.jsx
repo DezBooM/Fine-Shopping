@@ -64,7 +64,7 @@ function Cart() {
               <select
                 value={product.qty}
                 onChange={(e) => handleQtyChange(e, product.id)}
-                className="dark:bg-stone-900 rounded p-1"
+                className="dark:bg-stone-900 rounded p-1 outline-none"
               >
                 {[...Array(product.inStock).keys()].map((option) => (
                   <option key={option + 1}>{option + 1}</option>
