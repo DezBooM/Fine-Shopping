@@ -36,7 +36,7 @@ function Home() {
     }
     if (search) {
       sortedProducts = sortedProducts.filter((product) =>
-        product.name.toLowerCase().includes(search)
+        product.name.toLowerCase().includes(search.toLowerCase())
       )
     }
 

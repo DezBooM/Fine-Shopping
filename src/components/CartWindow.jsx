@@ -8,7 +8,7 @@ function CartWindow({ setIsActive }) {
   } = useCartContext()
   return (
     <div
-      className="border-2 border-lime-600 bg-lime-100 dark:bg-stone-600 dark:border-stone-900 absolute right-7 w-96 rounded-lg z-10"
+      className="border-2 border-lime-600 bg-lime-200 dark:bg-stone-600 dark:border-stone-900 absolute right-7 w-96 rounded-lg z-10"
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
     >

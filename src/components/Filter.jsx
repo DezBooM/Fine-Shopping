@@ -76,7 +76,7 @@ function Filter({ windowSize, setIsActiveFilter }) {
         <div className="flex flex-col items-end mt-2">
           <Rating rate={byRating} handleReview={handleReview} />
           <button
-            className="bg-lime-900 text-sm rounded-full font-bold tracking-wider border-none py-1 px-2 mt-2 text-stone-100 dark:bg-stone-600"
+            className="bg-lime-900 text-sm rounded-full font-bold tracking-wider active:shadow-custom-inner border-none py-1 px-2 mt-2 text-stone-100 dark:bg-stone-600"
             type="button"
             onClick={clearFilters}
             title="Clear rating filter"

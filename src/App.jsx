@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className={darkTheme ? "dark" : ""}>
-      <div className="bg-lime-100 min-h-screen dark:bg-stone-600 text-lime-900  dark:text-stone-100 font-red-hat-mono ">
+      <div className="bg-lime-200 min-h-screen dark:bg-stone-600 text-lime-900  dark:text-stone-100 font-red-hat-mono">
         <Navbar darkTheme={darkTheme} handleTheme={handleTheme} />
         <Routes>
           <Route path="/" element={<Home />} />

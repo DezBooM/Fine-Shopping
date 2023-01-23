@@ -34,7 +34,7 @@ function Navbar({ darkTheme, handleTheme }) {
             payload: e.target.value,
           })
         }}
-        className="rounded-full w-1/3 px-2 py-1 outline-none shadow-sm hover:shadow-xl dark:bg-stone-700"
+        className="rounded-full w-1/3 px-2 py-1 bg-lime-100 outline-none shadow-sm hover:shadow-xl dark:bg-stone-700"
       />
       <div className="flex items-center">
         <div className="relative">
@@ -58,7 +58,7 @@ function Navbar({ darkTheme, handleTheme }) {
         <button
           type="button"
           onClick={handleTheme}
-          className="bg-lime-500 rounded-full px-2 py-1 sm:px-4 sm:py-2 font-bold dark:bg-stone-700"
+          className="bg-lime-500 rounded-full w-16 sm:w-20 py-1 sm:py-2 font-bold dark:bg-stone-700"
         >
           {darkTheme ? "Light" : "Dark"}
         </button>

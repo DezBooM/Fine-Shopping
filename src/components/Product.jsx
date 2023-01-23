@@ -8,9 +8,9 @@ function Product(product) {
   } = useCartContext()
 
   return (
-    <div className="sm:mx-8 mb-2 sm:w-1/4 flex flex-col justify-center">
+    <div className="sm:mx-8 mb-2 w-full sm:w-1/4 flex flex-col items-center sm:items-start justify-center">
       <img
-        className="rounded-md w-52 h-44 sm:w-72 sm:h-56 object-cover"
+        className="rounded-md w-3/4 h-44 sm:w-72 sm:h-56 object-cover"
         src={product.image}
         alt={product.name}
       />
@@ -24,7 +24,7 @@ function Product(product) {
       <Rating rate={product.ratings} />
       <button
         onClick={() => dispatch({ type: "ADD_TO_CART", payload: product })}
-        className="disabled:opacity-30 text-stone-100 bg-lime-900 dark:bg-stone-900 mt-2 px-2 py-1 rounded-lg"
+        className="disabled:opacity-30 active:shadow-custom-inner text-stone-100 bg-lime-900 dark:bg-stone-900 mt-2 px-2 py-1 rounded-lg"
         disabled={
           !product.inStock || cart.some((item) => item.id === product.id)
         }
