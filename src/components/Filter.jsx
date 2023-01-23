@@ -14,7 +14,7 @@ function Filter({ windowSize, setIsActiveFilter }) {
   const clearFilters = () => filteredDispatch({ type: "CLEAR_FILTERS" })
 
   return (
-    <form className="flex flex-col sm:h-1/2 sm:space-y-5 w-full sm:w-1/3  px-4 sm:2 sm:pt-10 text-lg bg-lime-300 dark:bg-stone-900 rounded-b-lg">
+    <div className="flex flex-col sm:h-1/2 sm:space-y-5 w-full sm:w-1/3  px-4 sm:2 sm:pt-10 text-lg bg-lime-300 dark:bg-stone-900 rounded-b-lg">
       <fieldset>
         <div className="flex justify-between items-center sm:mb-5">
           <label htmlFor="radio1">Ascending</label>
@@ -94,7 +94,7 @@ function Filter({ windowSize, setIsActiveFilter }) {
           />
         </div>
       )}
-    </form>
+    </div>
   )
 }
 

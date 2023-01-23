@@ -20,6 +20,8 @@ function Cart() {
     })
   }
 
+  const subTotal = cart.reduce((acc, curr) => acc + Number(curr.qty), 0)
+
   const handlePurchase = () => {
     setPurchase(true)
     setTimeout(() => {
@@ -38,9 +40,9 @@ function Cart() {
 
   return (
     <div className="flex flex-col sm:flex-row w-full justify-between">
-      <div className="flex flex-col justify-center sm:w-2/3">
+      <div className="flex flex-col sm:w-2/3">
         {cart.length === 0 ? (
-          <p className="text-center my-2 font-bold mt-4 sm:mt-2 text-xl sm:text-3xl">Cart is empty!</p>
+          <p className="text-center my-2 font-bold mt-4 sm:mt-48 text-xl sm:text-3xl">Cart is empty!</p>
         ) : (
           cart.map((product) => (
             <div
@@ -80,7 +82,7 @@ function Cart() {
         )}
       </div>
       <div className="flex flex-col relative items-center justify-start gap-10 font-bold bg-lime-300 dark:bg-stone-900  w-full sm:w-1/3 pb-20 sm:px-4 sm:pt-10 mt-5 sm:mt-0 text-lg rounded-b-lg h-1/3">
-        <h1 className="text-2xl">Subtotal({cart.length}) items</h1>
+        <h1 className="text-2xl">Subtotal({subTotal}) items</h1>
         <span className="text-lg">Total: ${total}</span>
         <button
           onClick={handlePurchase}
