@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion"
 import { useState } from "react"
 import { BsCart, BsCartFill } from "react-icons/bs"
 import { Link } from "react-router-dom"
@@ -53,7 +54,9 @@ function Navbar({ darkTheme, handleTheme }) {
               />
             )}
           </Link>
-          {isActive && <CartWindow setIsActive={setIsActive} />}
+          <AnimatePresence>
+            {isActive && <CartWindow setIsActive={setIsActive} />}
+          </AnimatePresence>
         </div>
         <button
           type="button"

@@ -3,6 +3,7 @@ import { useCartContext } from "./contexts/CartContextProvider"
 import Filter from "./Filter"
 import Product from "./Product"
 import { AiOutlineArrowDown } from "react-icons/ai"
+import { AnimatePresence, motion } from "framer-motion"
 
 function Home() {
   const {
@@ -60,11 +61,16 @@ function Home() {
           onClick={() => setIsActiveFilter(!isActiveFilter)}
         />
       )}
-      <div className="flex flex-wrap gap-2 justify-center sm:mt-8 w-full">
-        {getSortedProducts().map((product) => (
-          <Product key={product.id} {...product} />
-        ))}
-      </div>
+      <motion.div
+        layout
+        className="flex flex-wrap gap-2 justify-center sm:mt-8 w-full"
+      >
+        <AnimatePresence>
+          {getSortedProducts().map((product) => (
+            <Product key={product.id} {...product} />
+          ))}
+        </AnimatePresence>
+      </motion.div>
     </div>
   )
 }
