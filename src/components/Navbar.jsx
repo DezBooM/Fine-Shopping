@@ -1,12 +1,14 @@
 import { AnimatePresence } from "framer-motion"
 import { useState } from "react"
 import { BsCart, BsCartFill } from "react-icons/bs"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import CartWindow from "./CartWindow"
 import { useCartContext } from "./contexts/CartContextProvider"
 
 function Navbar({ darkTheme, handleTheme }) {
   const [isActive, setIsActive] = useState(false)
+  const location = useLocation()
+  console.log(location)
   const {
     state: { cart },
     filteredState: { search },
@@ -15,6 +17,7 @@ function Navbar({ darkTheme, handleTheme }) {
 
   const handleMouseEnter = () => {
     if (!navigator.userAgentData.mobile) setIsActive(true)
+    if(location.pathname === '/cart') setIsActive(false)
   }
 
   return (

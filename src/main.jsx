@@ -6,11 +6,11 @@ import { CartContextProvider } from "./components/contexts/CartContextProvider"
 import "./index.css"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <CartContextProvider>
-    <BrowserRouter>
-      <React.StrictMode>
+  <React.StrictMode>
+    <CartContextProvider>
+      <BrowserRouter>
         <App />
-      </React.StrictMode>
-    </BrowserRouter>
-  </CartContextProvider>
+      </BrowserRouter>
+    </CartContextProvider>
+  </React.StrictMode>
 )
