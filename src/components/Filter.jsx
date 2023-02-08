@@ -1,5 +1,5 @@
 import { AiOutlineArrowUp } from "react-icons/ai"
-import { useCartContext } from "./contexts/CartContextProvider"
+import { useCartContext } from "../contexts/CartContextProvider"
 import Rating from "./Rating"
 
 function Filter({ windowSize, setIsActiveFilter }) {
