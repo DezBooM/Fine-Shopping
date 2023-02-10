@@ -1,4 +1,4 @@
-import { useCartContext } from "./contexts/CartContextProvider"
+import { useCartContext } from "../contexts/CartContextProvider"
 import Rating from "./Rating"
 import { motion } from "framer-motion"
 

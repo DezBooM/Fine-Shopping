@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { BsTrashFill } from "react-icons/bs"
-import { useCartContext } from "./contexts/CartContextProvider"
+import { useCartContext } from "../contexts/CartContextProvider"
 import Rating from "./Rating"
 import SuccessMsg from "./SuccessMsg"
 import { AnimatePresence, motion } from "framer-motion"

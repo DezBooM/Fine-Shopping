@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useCartContext } from "./contexts/CartContextProvider"
+import { useCartContext } from "../contexts/CartContextProvider"
 import Filter from "./Filter"
 import Product from "./Product"
 import { AiOutlineArrowDown } from "react-icons/ai"

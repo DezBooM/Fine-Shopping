@@ -3,7 +3,7 @@ import { useState } from "react"
 import { BsCart, BsCartFill } from "react-icons/bs"
 import { Link, useLocation } from "react-router-dom"
 import CartWindow from "./CartWindow"
-import { useCartContext } from "./contexts/CartContextProvider"
+import { useCartContext } from "../contexts/CartContextProvider"
 
 function Navbar({ darkTheme, handleTheme }) {
   const [isActive, setIsActive] = useState(false)

@@ -1,5 +1,5 @@
 import { BsTrashFill } from "react-icons/bs"
-import { useCartContext } from "./contexts/CartContextProvider"
+import { useCartContext } from "../contexts/CartContextProvider"
 import { motion } from "framer-motion"
 
 function CartWindow({ setIsActive }) {
