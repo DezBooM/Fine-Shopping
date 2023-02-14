@@ -8,7 +8,7 @@ import { useCartContext } from "../contexts/CartContextProvider"
 function Navbar({ darkTheme, handleTheme }) {
   const [isActive, setIsActive] = useState(false)
   const location = useLocation()
-  console.log(location)
+  
   const {
     state: { cart },
     filteredState: { search },
